@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>News-24 Houre</title>
+    <!-- ----------------------Bootstrap link------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- -----------------------font awasame------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ---------------------------------font icon cdn --------------------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ---------------------css link--------------- -->
+    <link rel="stylesheet" href="news24-houre.css">
+</head>
+
+<body class="bg-light">
+    <header>
+        <nav id="nav-01" class="navbar bg-light">
+            <div class="container">
+                <a class="navbar-brand"><span class="logo-style">News-24</span>Houre</a>
+                <ul class="">
+                    <a class="mx-2" href="">Home</a>
+                    <a class="" href="">Block</a>
+                    <img src="" alt="">
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+    <!-- -------------------all category container section------------ -->
+    <section class="container">
+        <nav id="topnav">
+            <div class="nav-links" id="nav-links">
+                <i class="fa-solid fa-xmark" onclick="hidemenu()"></i>
+                <ul id="ul-container">
+
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showmenu()"></i>
+        </nav>
+        <div class="container">
+            <input class="container py-2" type="text " placeholder="4 iteam found">
+        </div>
+    </section>
+
+    <!-- --------------------loading News Page update section------------------- -->
+
+    <section class="loading-News mt-5">
+
+        <div id="loading-news-container" class="container  ">
+
+
+        </div>
+
+    </section>
+
+    <!-- ------------------click modal section ---------------- -->
+
+    <section>
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div id="exampleModalLabel" class="modal-header">
+                        <div class="modal-title">Modal title</div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <!-- --------------------js file link----------------------- -->
+    <script src="js/news-nav-or-display_news.js"></script>
+    <script src="js/length-aleart-etc.js"></script>
+</body>
+
+</html>

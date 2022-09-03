@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@100&family=Anek+Odia:wght@100;600&family=Beau+Rivage&family=Kanit:ital,wght@0,500;0,600;1,500&family=Oswald:wght@400;500;600;700&family=PT+Sans+Narrow:wght@700&family=Poppins&display=swap");
+
+/* font-family: 'Anek Gujarati', sans-serif;
+font-family: 'Anek Odia', sans-serif;
+font-family: 'Beau Rivage', cursive;
+font-family: 'Kanit', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'PT Sans Narrow', sans-serif; */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -184,7 +195,7 @@ nav .fa-solid {
         background-color: rgb(222, 222, 222);
         font-size: 12px !important;
         font-weight: 200;
-      
+
 
     }
 }

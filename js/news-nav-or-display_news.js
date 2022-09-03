@@ -54,18 +54,17 @@ const displayCategoryDetails = details => {
     document.getElementById('loder').style.display = 'none';
 
 
-    // -------------length ----------
+    // -------------length CheakBox fild----------
 
     if (details.length > 0){
         const totallength = details.length;
         const inputfildText = document.getElementById('input-id');
-        inputfildText.innerText = 'Number' + ' ' + totallength + ' ' + ' Update News';
+        inputfildText.innerText = 'Total'+ ' ' + '[' + ' ' +  totallength + ' ' +']' + ' Update';
     }else if(details.length <= 0){
 
         const totallength = details.length;
         const inputfildText = document.getElementById('input-id');
-        inputfildText.innerText =  ' ' + ' ' + 'Not Update News';
-
+        inputfildText.innerText =  'Total ' + ' ' + 'Not Update ';
 
     }
 
@@ -80,7 +79,7 @@ const displayCategoryDetails = details => {
         createdivRow.innerHTML = `
                       <div class="col-lg-12 col-12">
                     <div class="row">
-                        <div class="col-lg-3 col-12 col-md-12 d-flex pb-3 justify-content">
+                        <div class="col-lg-3 col-12 col-md-12 d-flex pb-3 ">
                             <img class="mx-auto"  src="${detail.thumbnail_url}" alt="" >
                         </div>
 
@@ -92,7 +91,7 @@ const displayCategoryDetails = details => {
                             <!-- ------------------------view row------------ -->
                                  <div class="row d-flex align-items-center justify-content-center ">
                                        <div class="col-md-4 d-block align-items-center"">
-                                     <img  class="w-25 rounded-circle me-3 mx-auto" src="${detail.author.img}" alt="">
+                                     <img  class="w-25 rounded-circle me-3 mx-auto pb-2" src="${detail.author.img}" alt="">
                                  <div>
                                      <h6>${detail.author.name ? detail.author.name : 'NO Name Found'}</h6>
                                     <p class= "py-2"> ${detail.author.published_date ? detail.author.published_date : 'NO Date Found'}</p>
@@ -132,7 +131,6 @@ const displayCategoryDetails = details => {
     
 
 }
-
 
 
 loadCategoryDetails();

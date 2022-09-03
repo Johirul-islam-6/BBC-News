@@ -46,11 +46,16 @@ const loadCategoryDetails = (id) => {
 
 }
 
-const displayCategoryDetails = details => {
+const displayCategoryDetails = (details ) => {
 
+    
     // -----------loder option display none---------------
     document.getElementById('loder').style.display = 'none';
 
+
+    // --------------------moust view news start-----------------
+
+    details.sort((a, b) => b.total_view - a.total_view );
 
     // -------------length CheakBox fild----------
 
@@ -187,3 +192,7 @@ const viewClickDetailsDisplay = details => {
 
 viewClickDetailsDisplay()
 viewClickDetails();
+
+
+
+

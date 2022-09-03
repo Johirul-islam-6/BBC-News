@@ -8,7 +8,7 @@ font-family: 'Oswald', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'PT Sans Narrow', sans-serif; */
 
-
+/* ----------------------font family link ------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -45,19 +45,20 @@ header a {
     font-size: 25px;
 
 }
-.navbar-brand{
+
+.navbar-brand {
     color: rgb(21, 21, 21);
-        padding: 2px 1px;
-        font-weight: 900;
-        font-size: 25px;
+    padding: 2px 1px;
+    font-weight: 900;
+    font-size: 25px;
 }
 
 /* -----------------------Category navbar--------------------- */
- #ul-container {
-     display: flex;
-     justify-content: space-evenly !important;
-     margin: 20px 0;
- }
+#ul-container {
+    display: flex;
+    justify-content: space-evenly !important;
+    margin: 20px 0;
+}
 
 .topnav {
     display: flex;
@@ -88,7 +89,7 @@ header a {
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
-font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 .nav-links ul li::after {
@@ -160,10 +161,10 @@ nav .fa-solid {
 
     .nav-links ul li {
         display: block;
-    
+
     }
 
-       
+
     .nav-links {
         position: fixed;
         background: #1616178c;
@@ -190,10 +191,6 @@ nav .fa-solid {
 
     }
 
-    .navbar-brand {
-        /* display: none !important; */
-    }
-
     .logo-style {
         padding: 2px 0 !important;
         font-size: 18px !important;
@@ -215,11 +212,12 @@ nav .fa-solid {
 
 
     }
-         #ul-container {
-             display: block;
-             justify-content: space-evenly !important;
-             margin: 20px 0;
-         }
+
+    #ul-container {
+        display: block;
+        justify-content: space-evenly !important;
+        margin: 20px 0;
+    }
 }
 
 
@@ -232,7 +230,7 @@ nav .fa-solid {
 
 /* ============navbar end================ */
 
-
+/* =================all section css start ================= */
 #loading-news-row .img {
     width: 40px;
     height: 50px;
@@ -249,6 +247,8 @@ nav .fa-solid {
     font-weight: 500 !important;
     font-size: 18px;
 }
-.maincard{
+
+.maincard {
     font-family: 'PT Sans Narrow', sans-serif !important;
 }
+/* <===============all section css end====================> */

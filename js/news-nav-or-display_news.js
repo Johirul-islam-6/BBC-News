@@ -43,14 +43,28 @@ const loadCategoryDetails = (id) => {
 }
 
 const displayCategoryDetails = details => {
+ 
+    // -------------length ----------
+    if (details.length > 0){
+        const totallength = details.length;
+        const inputfildText = document.getElementById('input-id');
+        inputfildText.innerText = totallength ;
+    }else if(details.length <= 0){
 
-    // console.log(details)
+        const totallength = details.length;
+        const inputfildText = document.getElementById('input-id');
+        inputfildText.innerText = totallength + ' ' + 'not update news';
+
+
+    }
+
+
+
     const newsBodyContainer = document.getElementById('loading-news-container');
     newsBodyContainer.innerHTML = ''
     details.forEach(detail => {
         
-        const newsTotalLength = detail.category_id.length;
-
+    
 
         const createdivRow = document.createElement('div');
         createdivRow.classList.add('row', 'py-5', 'px-3', 'bg-color', 'my-3');

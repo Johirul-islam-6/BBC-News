@@ -37,7 +37,7 @@ const displayCatagory = categories => {
 const loadCategoryDetails = (id) => {
 
     // --------------loder display blocks-----------
-     document.getElementById('loder').style.display = 'block';
+    document.getElementById('loder').style.display = 'block';
 
     fetch(`https://openapi.programming-hero.com/api/news/category/${id}`)
         .then(res => res.json())
@@ -54,26 +54,27 @@ const displayCategoryDetails = details => {
 
     // -------------length CheakBox fild----------
 
-    if (details.length > 0){
+    if (details.length > 0) {
         const totallength = details.length;
         const inputfildText = document.getElementById('input-id');
-        inputfildText.innerText = 'Total'+ ' ' + '[' + ' ' +  totallength + ' ' +']' + ' Update';
-    }else if(details.length <= 0){
+        inputfildText.innerText = 'Total' + ' ' + '[' + ' ' + totallength + ' ' + ']' + ' Update';
+    } else if (details.length <= 0) {
 
         const totallength = details.length;
         const inputfildText = document.getElementById('input-id');
-        inputfildText.innerText =  'Total ' + ' ' + 'Not Update ';
+        inputfildText.innerText = 'Total ' + ' ' + 'Not Update ';
+        alert('No Data found Boss. Please Click Another Cetagorys btn!!')
 
     }
 
- 
+
 
     const newsBodyContainer = document.getElementById('loading-news-container');
     newsBodyContainer.innerHTML = ''
     details.forEach(detail => {
-        
+
         const createdivRow = document.createElement('div');
-        createdivRow.classList.add('row', 'py-5', 'px-3', 'bg-color', 'my-4','maincard');
+        createdivRow.classList.add('row', 'py-5', 'px-3', 'bg-color', 'my-4', 'maincard');
         createdivRow.innerHTML = `
                       <div class="col-lg-12 col-12">
                     <div class="row">
@@ -126,7 +127,7 @@ const displayCategoryDetails = details => {
 
     })
 
-    
+
 
 }
 

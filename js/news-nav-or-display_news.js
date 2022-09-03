@@ -36,10 +36,8 @@ const displayCatagory = categories => {
 // <============================= load Category details section js code ===============================>
 const loadCategoryDetails = (id) => {
 
-    // --------------loder display block-----------
+    // --------------loder display blocks-----------
      document.getElementById('loder').style.display = 'block';
-
-
 
     fetch(`https://openapi.programming-hero.com/api/news/category/${id}`)
         .then(res => res.json())
@@ -50,7 +48,7 @@ const loadCategoryDetails = (id) => {
 
 const displayCategoryDetails = details => {
 
-    // -----------loder display none---------------
+    // -----------loder option display none---------------
     document.getElementById('loder').style.display = 'none';
 
 
@@ -127,7 +125,7 @@ const displayCategoryDetails = details => {
         newsBodyContainer.appendChild(createdivRow);
 
     })
-    // ----------stop spinner ----------
+
     
 
 }
@@ -147,6 +145,7 @@ const viewClickDetails = (id) => {
 
 }
 
+// --------------------modal btn show display -----------------
 const viewClickDetailsDisplay = details => {
 
     // console.log(details.data[0].thumbnail_url)

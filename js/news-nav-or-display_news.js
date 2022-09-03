@@ -68,7 +68,7 @@ const displayCategoryDetails = (details ) => {
         const totallength = details.length;
         const inputfildText = document.getElementById('input-id');
         inputfildText.innerText = 'Total ' + ' ' + 'Not Update ';
-        alert('No Data found Boss. Please Click Another Cetagorys btn!!')
+        // alert('No Data found Boss. Please Click Another Cetagorys btn!!')
 
     }
 

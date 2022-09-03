@@ -28,18 +28,46 @@
                 <a class="navbar-brand"><span class="logo-style">News-24</span>Houre</a>
                 <ul class="">
                     <a class="mx-2" href="">Home</a>
-                    <a class="" href="">Block</a>
-                    <img src="" alt="">
+                    <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Block</a>
+                    <img class="myimage" src="img/round-gradient-designify.png" alt="">
                 </ul>
 
             </div>
         </nav>
+
+        <!-- --------modal Q:t poen --------- -->
+        
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div id="staticBackdropLabel " class="modal-header">
+                     <div class="container d-block">
+                        <h2 class="text-center py-2">All quteion Ans :</h2>
+                
+                       <p class="pt-5 ">01.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, fugit.</p>
+                       <p class="pt-2">02.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, fugit.</p>
+                       <p class="pt-2">03.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, fugit.</p>
+                       <p class="pt-2">04.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, fugit.</p>
+                      
+                            </div>
+                    </div>
+                   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </header>
     <!-- -------------------all category container section------------ -->
     <section class="container">
         <nav id="topnav">
             <div class="nav-links" id="nav-links">
-                <i class="fa-solid fa-xmark" onclick="hidemenu()"></i>
+                <i class="fa-solid fa-xmark text-white" onclick="hidemenu()"></i>
                 <ul id="ul-container">
 
                 </ul>
@@ -47,7 +75,7 @@
             <i class="fa-solid fa-bars" onclick="showmenu()"></i>
         </nav>
         <div class="container">
-            <input class="container py-2" type="text " placeholder="4 iteam found">
+            <p id="'input-id'" class="pss container py-2 text-center" type="text " placeholder="4 iteam found"> 8 iteam</p>
         </div>
     </section>
 
@@ -55,7 +83,7 @@
 
     <section class="loading-News mt-5">
 
-        <div id="loading-news-container" class="container  ">
+        <div id="loading-news-container" class="container ">
 
 
         </div>
@@ -65,14 +93,11 @@
     <!-- ------------------click modal section ---------------- -->
 
     <section>
-        <!-- Button trigger modal -->
-
-
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div id="exampleModalLabel" class="modal-header">
+                    <div id="exampleModalLabel" class="modal-header ">
                         <div class="modal-title">Modal title</div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>

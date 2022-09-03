@@ -19,7 +19,7 @@ const loadCatagory = () => {
 }
 
 const displayCatagory = categories => {
-    // console.log(categories);
+    console.log(categories);
     const categoryContainer = document.getElementById("ul-container");
     categories.forEach(category => {
         // console.log(category)
@@ -32,6 +32,8 @@ const displayCatagory = categories => {
 }
 
 
+
+// <============================= load Category details section js code ===============================>
 const loadCategoryDetails = (id) => {
     fetch(`https://openapi.programming-hero.com/api/news/category/${id}`)
         .then(res => res.json())
@@ -46,14 +48,17 @@ const displayCategoryDetails = details => {
     const newsBodyContainer = document.getElementById('loading-news-container');
     newsBodyContainer.innerHTML = ''
     details.forEach(detail => {
-        // console.log(detail._id);
+        
+        const newsTotalLength = detail.category_id.length;
+
+
         const createdivRow = document.createElement('div');
         createdivRow.classList.add('row', 'py-5', 'px-3', 'bg-color', 'my-3');
         createdivRow.innerHTML = `
                       <div class="col-lg-12 col-12">
                     <div class="row">
-                        <div class="col-lg-3">
-                            <img class  src="${detail.thumbnail_url}" alt="" >
+                        <div class="col-lg-3 col-12 col-md-12 d-flex pb-3 justify-content">
+                            <img class="mx-auto"  src="${detail.thumbnail_url}" alt="" >
                         </div>
 
                         <div class="col-lg-9">
@@ -62,20 +67,20 @@ const displayCategoryDetails = details => {
                                  <p class="card-text my-3">${detail.details.slice(0, 400) + ' ' + 'more.....'}</p>
 
                             <!-- ------------------------view row------------ -->
-                                 <div class="row d-flex align-items-center">
+                                 <div class="row d-flex align-items-center justify-content-center ">
                                        <div class="col-md-4 d-block align-items-center"">
-                                     <img class="w-25 rounded-circle me-3" src="${detail.author.img}" alt="">
+                                     <img  class="w-25 rounded-circle me-3 mx-auto" src="${detail.author.img}" alt="">
                                  <div>
                                      <h6>${detail.author.name ? detail.author.name : 'NO Name Found'}</h6>
-                                    <p> ${detail.author.published_date ? detail.author.published_date : 'NO Date Found'}</p>
+                                    <p class= "py-2"> ${detail.author.published_date ? detail.author.published_date : 'NO Date Found'}</p>
                                         </div>
                        
                                      </div>
-                                         <div class="col-md-3 d-flex">
-                                          <h5 class='mx-2' ><i class="fa-regular fa-eye"></i></h5>
+                                         <div class="col-md-3 d-flex ">
+                                          <h5 class='mx-2 class= "py-2"' ><i class="fa-regular fa-eye"></i></h5>
                                          <h5 > ${detail.total_view ? detail.total_view : '00'} M</h5>
                                  </div>
-                                <div class="col-lg-3 d-flex">
+                                <div class="col-lg-3 col-sm-12 d-flex py-2">
                                    <h5><i class="fa-solid fa-star"></i></h5>
                                    <h5><i class="fa-solid fa-star"></i></h5>
                                    <h5><i class="fa-solid fa-star"></i></h5>
@@ -107,6 +112,7 @@ const displayCategoryDetails = details => {
 loadCategoryDetails();
 loadCatagory();
 
+// <==========================modal section js code ==========================>
 const viewClickDetails = (id) => {
     fetch(`https://openapi.programming-hero.com/api/news/${id}`)
         .then(res => res.json())
@@ -117,24 +123,28 @@ const viewClickDetails = (id) => {
 
 const viewClickDetailsDisplay = details => {
 
-    console.log(details)
+    // console.log(details)
     const modal = document.getElementById('exampleModalLabel');
     modal.innerHTML = ''
 
-    const creatediv = document.createElement('div');
+    try {
+        const creatediv = document.createElement('div');
 
-    creatediv.innerHTML = `
+        creatediv.innerHTML = `
                             <div class="row">
                                  <div class="col-lg-12">
                                          <img class="w-100"  src="${details.data[0].image_url}" alt="" >
-                                         <h3 class="card-text my-3">${details.data[0].title.slice(0, 400) + ' ' + 'more.....'}}</h3>
-                                         <p>${details.data[0].details}</p>
+                                         <h3 class="card-text my-3">${details.data[0].title}</h3>
+                                         <p>${details.data[0].details.slice(0, 250) + ' ' + 'more.....'}</p>
                                          <h5 h5 > ${details.data[0].author.published_date}</h5 >
                              </div>
                              </div>
      `;
-    modal.appendChild(creatediv);
+        modal.appendChild(creatediv);
 
+    } catch (err) {
+        console.log(err)
+    }
 }
 
 viewClickDetailsDisplay()

@@ -1,4 +1,4 @@
-// <====================Responsive Nav bar side  js code===================> 
+// <====================Responsive Navbar side  js code===================> 
 var navlinks = document.getElementById("nav-links");
 
 function showmenu() {
@@ -7,7 +7,7 @@ function showmenu() {
 function hidemenu() {
     navlinks.style.right = "-300px";
 }
-// <====================Responsive Nav bar side  js code end ===================> 
+// <====================Responsive Navbar side  js code end ===================> 
 
 
 // <--------start nav news detailc----------->
@@ -169,6 +169,11 @@ const viewClickDetailsDisplay = details => {
                                            <p class = 'text '>${details.data[0].author.name ? details.data[0].author.name : 'No author Name!'}</p>
                                            </div>
                                          </div>
+                                         </div>
+                                         <div class="col-md-3 d-flex ">
+                                          <h5 class='mx-2 class= "py-2"' ><i class="fa-regular fa-eye"></i></h5>
+                                         <h5 > ${details.data[0].total_view ? details.data[0].total_view : 'not view'} M</h5>
+                                 </div>
                              </div>
                              </div>
      `;

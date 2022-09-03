@@ -9,13 +9,14 @@ body {
 }
 
 /* ============navbar start================ */
-a {
+header a {
     text-decoration: none;
     color: #000;
     font-size: 16px;
     font-weight: 700;
 }
-.myimage{
+
+.myimage {
     width: 60px;
     border-radius: 50%;
     margin-left: 5px;
@@ -30,7 +31,7 @@ a {
     color: rgb(12, 38, 187);
     padding: 2px 1px;
     font-weight: 900;
-    
+
 }
 
 /* -----------------------Category navbar--------------------- */
@@ -128,10 +129,11 @@ nav .fa-solid {
         font-size: 34px;
     }
 
-        .nav-links ul li a{
-            color: #fff;
-            font-size: 16px !important;
-        }
+    .nav-links ul li a {
+        color: #fff;
+        font-size: 16px !important;
+    }
+
     .nav-links ul li {
         display: block;
     }
@@ -159,26 +161,38 @@ nav .fa-solid {
 
     .nav-links {
         padding: 30px;
-      
+
     }
-    .navbar-brand{
+
+    .navbar-brand {
         font-size: 14px;
     }
-    .logo-style{
-      padding: 2px 0 !important;
+
+    .logo-style {
+        padding: 2px 0 !important;
     }
-        .myimage{
-           display: none;
-        }
-        a{
-            font-size: 10px !important;
-        }
+
+    .myimage {
+        display: none;
+    }
+
+    a {
+        font-size: 10px !important;
+    }
+
+    .pss {
+        background-color: rgb(222, 222, 222);
+        font-size: 12px !important;
+        font-weight: 200;
+      
+
+    }
 }
 
 
-.pss{
+.pss {
     background-color: rgb(222, 222, 222);
-    font-size: 18px;
+    font-size: 25px !important;
     font-weight: 700;
     color: rgb(97, 97, 97);
 }
@@ -186,13 +200,18 @@ nav .fa-solid {
 /* ============navbar end================ */
 
 
-#loading-news-row .img{
+#loading-news-row .img {
     width: 40px;
     height: 50px;
-    
+
 }
 
-.bg-color{
+.bg-color {
     background-color: rgb(209, 209, 209);
     border-radius: 5px;
+}
+
+.card-text {
+    color: rgb(52, 52, 52) !important;
+    font-weight: 500 !important;
 }

@@ -48,18 +48,18 @@ const displayCategoryDetails = details => {
     if (details.length > 0){
         const totallength = details.length;
         const inputfildText = document.getElementById('input-id');
-        inputfildText.innerText = totallength ;
+        inputfildText.innerText = 'Number' + ' ' + totallength + ' ' + ' Update News';
     }else if(details.length <= 0){
 
         const totallength = details.length;
         const inputfildText = document.getElementById('input-id');
-        inputfildText.innerText = totallength + ' ' + 'not update news';
+        inputfildText.innerText =  ' ' + ' ' + 'Not Update News';
 
 
     }
 
 
-
+    toggleSpinner(true); 
     const newsBodyContainer = document.getElementById('loading-news-container');
     newsBodyContainer.innerHTML = ''
     details.forEach(detail => {
@@ -67,7 +67,7 @@ const displayCategoryDetails = details => {
     
 
         const createdivRow = document.createElement('div');
-        createdivRow.classList.add('row', 'py-5', 'px-3', 'bg-color', 'my-3');
+        createdivRow.classList.add('row', 'py-5', 'px-3', 'bg-color', 'my-4');
         createdivRow.innerHTML = `
                       <div class="col-lg-12 col-12">
                     <div class="row">
@@ -78,7 +78,7 @@ const displayCategoryDetails = details => {
                         <div class="col-lg-9">
 
                               <h4 class="card-title">${detail.title}</h4>
-                                 <p class="card-text my-3">${detail.details.slice(0, 400) + ' ' + 'more.....'}</p>
+                                 <p class="card-text my-3">${detail.details.slice(0, 450) + ' ' + 'more.....'}</p>
 
                             <!-- ------------------------view row------------ -->
                                  <div class="row d-flex align-items-center justify-content-center ">
@@ -92,7 +92,7 @@ const displayCategoryDetails = details => {
                                      </div>
                                          <div class="col-md-3 d-flex ">
                                           <h5 class='mx-2 class= "py-2"' ><i class="fa-regular fa-eye"></i></h5>
-                                         <h5 > ${detail.total_view ? detail.total_view : '00'} M</h5>
+                                         <h5 > ${detail.total_view ? detail.total_view : 'not view'} M</h5>
                                  </div>
                                 <div class="col-lg-3 col-sm-12 d-flex py-2">
                                    <h5><i class="fa-solid fa-star"></i></h5>
@@ -119,19 +119,30 @@ const displayCategoryDetails = details => {
         newsBodyContainer.appendChild(createdivRow);
 
     })
+    // ----------stop spinner ----------
+    
 
 }
 
+const toggleSpinner = isLoding =>{
+    const loderSpinner = document.getElementById('loder');
+    if(isLoding){
+        loderSpinner.classList.remove('d-none')
+    }else{
+        loderSpinner.classList.add('d-none')
+    }
+}
 
 loadCategoryDetails();
 loadCatagory();
+
 
 // <==========================modal section js code ==========================>
 const viewClickDetails = (id) => {
     fetch(`https://openapi.programming-hero.com/api/news/${id}`)
         .then(res => res.json())
         .then(data => viewClickDetailsDisplay(data))
-    // console.log(id)
+        .catch(error => viewClickDetailsDisplay(error))
 
 }
 
@@ -159,6 +170,7 @@ const viewClickDetailsDisplay = details => {
     } catch (err) {
         console.log(err)
     }
+
 }
 
 viewClickDetailsDisplay()

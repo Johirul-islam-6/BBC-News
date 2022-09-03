@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>News-24 Houre</title>
+    <!-- ----------------------Bootstrap link------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- -----------------------font awasame------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ---------------------------------font icon cdn --------------------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ---------------------css link--------------- -->
+    <link rel="stylesheet" href="news24-houre.css">
+</head>
+
+<body class="bg-light">
+    <header>
+        <nav id="nav-01" class="navbar bg-light">
+            <div class="container">
+                <a class="navbar-brand"><span class="logo-style">News-24</span>Houre</a>
+                <ul class="">
+                    <a class="mx-2" href="">Home</a>
+                    <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Block</a>
+                    <img class="myimage" src="img/round-gradient-designify.png" alt="">
+                </ul>
+
+            </div>
+        </nav>
+
+        <!-- --------modal Q:t poen --------- -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div id="staticBackdropLabel " class="modal-header">
+                        <div class="container d-block">
+                            <h2 class="text-center py-2">__All Quteion Ans Today__</h2>
+
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="true" aria-controls="collapseOne">
+                                            Question: 01.
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                         <strong>#Var : The scope of a var variable is functional scope. var  is global variable.Do not use var</strong> 
+                                        <strong> #Let : The scope of a let variable is block scope. Othere time let variable Can be changed value later.</strong>
+                                        <strong> #Const :The scope of a const variable is block scope.Othere time let variable Can't be changed value later.<br> <code>Thank you My dear web-codding Master</code>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Question: 02.
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                        <strong>#Regular Function : Regular functions created using function declarations or expressions are constructible and callable. Since regular
+                                        functions are constructible, they can be called using the new keyword. However, the arrow functions are only callable
+                                        and not constructible, i.e arrow functions can never be used as constructor functions.</strong><br> <br><br>
+                                        <strong> #Arrow Function : Arrow functions are a new way to write anonymous function expressions, and are similar to lambda functions in some other
+                                        programming languages, such as Python. Arrow functions differ from traditional functions in a number of ways, including
+                                        the way their scope is determined and how their syntax is expressed <br><code>Thank you My dear web-codding Master</code>.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Question: 03.
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>#.map() : .map() is key-value pairs in which values of any type can be used as either keys or values. A Map object
+                                            always remembers the actual insertion order of the keys. Keys and values in a Map object may be primitive or objects. It
+                                            returns the new or empty Map.</strong><br><br>
+                                            <strong> #.filter() : The filter() method creates a new array filled with elements that pass a test provided by a function. The filter()
+                                            method does not execute the function for empty elements. The filter() method does not change the original array.</strong><br><br>
+                                            <strong> #.find() :The find() method returns the value of the first element that passes a test. The find() method executes a function for
+                                            each array element. The find() method returns undefined if no elements are found. The find() method does not execute the
+                                            function for empty elements.</strong><code>Thank you My dear web-codding Master !</code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- -------------------all category container section------------ -->
+    <section class="container">
+        <nav id="topnav">
+            <div class="nav-links" id="nav-links">
+                <i class="fa-solid fa-xmark text-white" onclick="hidemenu()"></i>
+                <ul id="ul-container">
+
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showmenu()"></i>
+        </nav>
+        <div class="container">
+            <p class="pss container py-2 text-center" type="text " placeholder="4 iteam found">Today <span id="input-id"
+                    class="text-primary fs-5"></span> Total Update News !!</p>
+        </div>
+    </section>
+
+    <!-- --------------------loading News Page update section------------------- -->
+
+
+    <!-- ----------------Loading...spiner ------------------ -->
+ <section class="d-none" id="loder">
+    <div class="d-flex justify-content-center align-items-center ">
+        <div class="spinner-border mt-5" role="status">
+            <span class="visually-hidden ">Loading...</span>
+        </div>
+    </div>
+ </section>
+
+    <section class="loading-News mt-5">
+
+        <div id="loading-news-container" class="container ">
+
+
+        </div>
+
+    </section>
+
+    <!-- ------------------click modal section ---------------- -->
+
+    <section>
+        <!-- Modal btn -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div id="exampleModalLabel" class="modal-header ">
+                        <div class="modal-title">Modal title</div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <!-- --------------------js file link----------------------- -->
+    <script src="js/news-nav-or-display_news.js"></script>
+    <script src="js/length-aleart-etc.js"></script>
+</body>
+
+</html>

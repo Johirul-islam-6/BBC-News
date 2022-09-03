@@ -35,6 +35,12 @@ const displayCatagory = categories => {
 
 // <============================= load Category details section js code ===============================>
 const loadCategoryDetails = (id) => {
+
+    // --------------loder display block-----------
+     document.getElementById('loder').style.display = 'block';
+
+
+
     fetch(`https://openapi.programming-hero.com/api/news/category/${id}`)
         .then(res => res.json())
         .then(data => displayCategoryDetails(data.data))
@@ -43,8 +49,13 @@ const loadCategoryDetails = (id) => {
 }
 
 const displayCategoryDetails = details => {
- 
+
+    // -----------loder display none---------------
+    document.getElementById('loder').style.display = 'none';
+
+
     // -------------length ----------
+
     if (details.length > 0){
         const totallength = details.length;
         const inputfildText = document.getElementById('input-id');
@@ -58,14 +69,12 @@ const displayCategoryDetails = details => {
 
     }
 
+ 
 
-    toggleSpinner(true); 
     const newsBodyContainer = document.getElementById('loading-news-container');
     newsBodyContainer.innerHTML = ''
     details.forEach(detail => {
         
-    
-
         const createdivRow = document.createElement('div');
         createdivRow.classList.add('row', 'py-5', 'px-3', 'bg-color', 'my-4');
         createdivRow.innerHTML = `
@@ -124,17 +133,11 @@ const displayCategoryDetails = details => {
 
 }
 
-const toggleSpinner = isLoding =>{
-    const loderSpinner = document.getElementById('loder');
-    if(isLoding){
-        loderSpinner.classList.remove('d-none')
-    }else{
-        loderSpinner.classList.add('d-none')
-    }
-}
+
 
 loadCategoryDetails();
 loadCatagory();
+
 
 
 // <==========================modal section js code ==========================>

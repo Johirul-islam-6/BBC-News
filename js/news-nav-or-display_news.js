@@ -19,7 +19,7 @@ const loadCatagory = () => {
 }
 
 const displayCatagory = categories => {
-    console.log(categories);
+    // console.log(categories);
     const categoryContainer = document.getElementById("ul-container");
     categories.forEach(category => {
         // console.log(category)
@@ -75,7 +75,7 @@ const displayCategoryDetails = details => {
     details.forEach(detail => {
         
         const createdivRow = document.createElement('div');
-        createdivRow.classList.add('row', 'py-5', 'px-3', 'bg-color', 'my-4');
+        createdivRow.classList.add('row', 'py-5', 'px-3', 'bg-color', 'my-4','maincard');
         createdivRow.innerHTML = `
                       <div class="col-lg-12 col-12">
                     <div class="row">
@@ -149,7 +149,7 @@ const viewClickDetails = (id) => {
 
 const viewClickDetailsDisplay = details => {
 
-    // console.log(details)
+    // console.log(details.data[0].thumbnail_url)
     const modal = document.getElementById('exampleModalLabel');
     modal.innerHTML = ''
 
@@ -160,9 +160,15 @@ const viewClickDetailsDisplay = details => {
                             <div class="row">
                                  <div class="col-lg-12">
                                          <img class="w-100"  src="${details.data[0].image_url}" alt="" >
-                                         <h3 class="card-text my-3">${details.data[0].title}</h3>
-                                         <p>${details.data[0].details.slice(0, 250) + ' ' + 'more.....'}</p>
-                                         <h5 h5 > ${details.data[0].author.published_date}</h5 >
+                                         <h1 class="card-text my-3">${details.data[0].title}</h1>
+                                         <p class = 'text'>${details.data[0].details.slice(0, 250) + ' ' + 'more.....'}</p>
+                                         <h5 h5 > ${details.data[0].author.published_date ? details.data[0].author.published_date : 'No published Date'}</h5 >
+                                         <div class= "d-flex align-items-center justify-content-center ">
+                                           <div class = "mx-auto">
+                                           <img class="w-25 rounded-circle my-2 d-block"  src="${details.data[0].author.img}" alt="" >
+                                           <p class = 'text '>${details.data[0].author.name ? details.data[0].author.name : 'No author Name!'}</p>
+                                           </div>
+                                         </div>
                              </div>
                              </div>
      `;

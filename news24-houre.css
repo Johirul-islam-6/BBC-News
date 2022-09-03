@@ -42,10 +42,16 @@ header a {
     color: rgb(12, 38, 187);
     padding: 2px 1px;
     font-weight: 900;
+    font-size: 25px;
 
 }
 
 /* -----------------------Category navbar--------------------- */
+ #ul-container {
+     display: flex;
+     justify-content: space-evenly !important;
+     margin: 20px 0;
+ }
 
 .topnav {
     display: flex;
@@ -72,10 +78,11 @@ header a {
 }
 
 .nav-links ul li a {
-    color: rgb(0, 0, 0);
+    color: rgb(92, 92, 92);
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
+font-family: 'Oswald', sans-serif;
 }
 
 .nav-links ul li::after {
@@ -147,8 +154,10 @@ nav .fa-solid {
 
     .nav-links ul li {
         display: block;
+    
     }
 
+       
     .nav-links {
         position: fixed;
         background: #1616178c;
@@ -176,11 +185,12 @@ nav .fa-solid {
     }
 
     .navbar-brand {
-        font-size: 14px;
+        display: none !important;
     }
 
     .logo-style {
         padding: 2px 0 !important;
+        font-size: 18px !important;
     }
 
     .myimage {
@@ -188,7 +198,7 @@ nav .fa-solid {
     }
 
     a {
-        font-size: 10px !important;
+        font-size: 13px !important;
     }
 
     .pss {
@@ -198,6 +208,11 @@ nav .fa-solid {
 
 
     }
+         #ul-container {
+             display: block;
+             justify-content: space-evenly !important;
+             margin: 20px 0;
+         }
 }
 
 
@@ -225,4 +240,8 @@ nav .fa-solid {
 .card-text {
     color: rgb(52, 52, 52) !important;
     font-weight: 500 !important;
+    font-size: 18px;
+}
+.maincard{
+    font-family: 'PT Sans Narrow', sans-serif !important;
 }
